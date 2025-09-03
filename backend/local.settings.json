@@ -1,0 +1,27 @@
+{
+  "IsEncrypted": false,
+  "Values": {
+    "AzureWebJobsStorage": "UseDevelopmentStorage=true",
+    "FUNCTIONS_WORKER_RUNTIME": "powershell",
+    "FUNCTIONS_WORKER_RUNTIME_VERSION": "7.4",
+    "KEY_VAULT_NAME": "kv-ai-tenantshield-dev",
+    "OPENAI_API_KEY": "sk-local-development-key",
+    "CLAUDE_API_KEY": "",
+    "GRAPH_CLIENT_SECRET": "",
+    "SERVICE_BUS_CONNECTION": "",
+    "AZURE_STORAGE_CONNECTION_STRING": "UseDevelopmentStorage=true",
+    "ApplicationId": "your-app-id",
+    "ApplicationSecret": "your-app-secret",
+    "TenantId": "your-tenant-id",
+    "RefreshToken": "your-refresh-token",
+    "AZURE_FUNCTIONS_ENVIRONMENT": "Development",
+    "APPINSIGHTS_INSTRUMENTATIONKEY": "",
+    "APPLICATIONINSIGHTS_CONNECTION_STRING": ""
+  },
+  "Host": {
+    "LocalHttpPort": 7071,
+    "CORS": "*",
+    "CORSCredentials": false
+  },
+  "ConnectionStrings": {}
+}

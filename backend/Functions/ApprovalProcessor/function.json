@@ -1,0 +1,40 @@
+{
+  "bindings": [
+    {
+      "authLevel": "function",
+      "type": "httpTrigger",
+      "direction": "in",
+      "name": "Request",
+      "methods": [
+        "post"
+      ],
+      "route": "approval-processor"
+    },
+    {
+      "type": "http",
+      "direction": "out",
+      "name": "Response"
+    },
+    {
+      "type": "table",
+      "direction": "out", 
+      "name": "ApprovalUpdates",
+      "tableName": "ApprovalRequests",
+      "connection": "AzureWebJobsStorage"
+    },
+    {
+      "type": "table",
+      "direction": "out",
+      "name": "AuditLogs", 
+      "tableName": "AuditLogs",
+      "connection": "AzureWebJobsStorage"
+    },
+    {
+      "type": "serviceBus",
+      "direction": "out",
+      "name": "NotificationQueue",
+      "queueName": "approval-notifications",
+      "connection": "ServiceBusConnection"
+    }
+  ]
+}

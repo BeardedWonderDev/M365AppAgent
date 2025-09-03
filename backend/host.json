@@ -1,0 +1,46 @@
+{
+  "version": "2.0",
+  "extensionBundle": {
+    "id": "Microsoft.Azure.Functions.ExtensionBundle",
+    "version": "[3.*, 4.0.0)"
+  },
+  "functionTimeout": "00:10:00",
+  "logging": {
+    "applicationInsights": {
+      "samplingSettings": {
+        "isEnabled": true,
+        "maxTelemetryItemsPerSecond": 20,
+        "excludedTypes": "Dependency;Trace"
+      },
+      "enableLiveMetrics": true
+    },
+    "logLevel": {
+      "default": "Information",
+      "Host.Results": "Information",
+      "Function": "Information",
+      "Host.Aggregator": "Information"
+    }
+  },
+  "managedDependency": {
+    "enabled": true
+  },
+  "powerShell": {
+    "version": "7.4"
+  },
+  "extensions": {
+    "serviceBus": {
+      "prefetchCount": 16,
+      "messageHandlerOptions": {
+        "autoComplete": true,
+        "maxConcurrentCalls": 16,
+        "maxAutoRenewDuration": "00:05:00"
+      }
+    },
+    "http": {
+      "routePrefix": "api",
+      "maxOutstandingRequests": 200,
+      "maxConcurrentRequests": 100,
+      "dynamicThrottlesEnabled": true
+    }
+  }
+}

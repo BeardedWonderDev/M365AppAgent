@@ -1,0 +1,24 @@
+{
+  "bindings": [
+    {
+      "authLevel": "function",
+      "type": "httpTrigger",
+      "direction": "in",
+      "name": "Request",
+      "methods": ["post"],
+      "route": "email/intake"
+    },
+    {
+      "type": "http",
+      "direction": "out",
+      "name": "Response"
+    },
+    {
+      "type": "serviceBus",
+      "direction": "out",
+      "name": "ServiceBusQueue",
+      "queueName": "ai-classification-queue",
+      "connection": "ServiceBusConnection"
+    }
+  ]
+}
